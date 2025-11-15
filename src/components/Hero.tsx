@@ -46,25 +46,6 @@ const Hero = () => {
               >
                 Inschrijven voor ouders
               </Link>
-              <Link
-                href="#over-ons"
-                className="border-2 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-opacity hover:opacity-80"
-                style={{
-                  borderColor: '#40735B',
-                  backgroundColor: 'transparent',
-                  color: '#40735B'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#40735B';
-                  e.currentTarget.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = '#40735B';
-                }}
-              >
-                Meer over ons
-              </Link>
             </div>
           </motion.div>
 

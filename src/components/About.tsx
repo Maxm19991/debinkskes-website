@@ -140,28 +140,6 @@ const About = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Certification */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <div className="text-white p-6 rounded-lg inline-block" style={{ backgroundColor: '#40735B' }}>
-            <h4 className="text-xl font-semibold mb-4">✅ LRK Geregistreerd</h4>
-            <p className="mb-4">
-              U kunt kinderopvangtoeslag aanvragen, en ik ben aangesloten bij Gastouderbureau Villa Nana.
-            </p>
-            <Link
-              href="#inschrijven"
-              className="bg-white px-6 py-2 rounded-md font-semibold transition-opacity hover:opacity-80 inline-block"
-              style={{ color: '#40735B' }}
-            >
-              Inschrijven voor ouders
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

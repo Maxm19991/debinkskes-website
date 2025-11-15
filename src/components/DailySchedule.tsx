@@ -160,28 +160,6 @@ const DailySchedule = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <div className="text-white p-8 rounded-lg inline-block" style={{ backgroundColor: '#40735B' }}>
-            <h4 className="text-2xl font-semibold mb-4">Vragen over onze dagindeling?</h4>
-            <p className="mb-6 text-lg">
-              Neem gerust contact op voor meer informatie!
-            </p>
-            <Link
-              href="#inschrijven"
-              className="bg-white px-8 py-3 rounded-md font-semibold transition-opacity hover:opacity-80 inline-block text-lg"
-              style={{ color: '#40735B' }}
-            >
-              Inschrijven voor ouders
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
