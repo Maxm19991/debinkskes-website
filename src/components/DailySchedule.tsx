@@ -2,68 +2,74 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Hand, Apple, Footprints, Moon, Utensils, Bed, Sun, Cookie, Sandwich, Home, CloudRain, Baby, type LucideIcon } from 'lucide-react';
 
 const DailySchedule = () => {
-  const schedule = [
+  const schedule: Array<{
+    time: string;
+    activity: string;
+    description: string;
+    Icon: LucideIcon;
+  }> = [
     {
       time: "7:30 - 9:00",
       activity: "Brengen & Vrij Spelen",
       description: "De kinderen worden gebracht, ouders mogen gezellig mee naar binnen komen om afscheid te nemen. Lekker vrij spelen.",
-      icon: "👋"
+      Icon: Hand
     },
     {
       time: "9:00 - 9:30",
       activity: "Fruit & Verzorging",
       description: "Fruit eten en drinken. Verschonen/naar het toilet gaan.",
-      icon: "🍎"
+      Icon: Apple
     },
     {
       time: "9:30 - 10:00",
       activity: "Wandeling met Binky",
       description: "Wandeling met hond Binky. Bij mooi weer naar het kanaal om bootjes te kijken en eendjes voeren. Bij slecht weer binnen activiteiten zoals knutselen, dansen, voorlezen.",
-      icon: "🚶‍♀️"
+      Icon: Footprints
     },
     {
       time: "10:00",
       activity: "Slaapje Kleintjes",
       description: "Slaapje voor de kleintjes.",
-      icon: "😴"
+      Icon: Moon
     },
     {
       time: "11:30 - 12:30",
       activity: "Warme Maaltijd",
       description: "We eten een warme maaltijd en drinken water of iets anders. Na de maaltijd worden alle kindjes verschoond/gaan naar toilet.",
-      icon: "🍽️"
+      Icon: Utensils
     },
     {
       time: "12:30 - 14:30",
       activity: "Middagdutje",
       description: "Middagdutje voor de kindjes die nog slapen. Voor kindjes die wakker blijven: vrijspelen of samen een spelletje doen.",
-      icon: "💤"
+      Icon: Bed
     },
     {
       time: "14:30 - 15:00",
       activity: "Wakker Worden",
       description: "Kindjes worden rustig wakker en worden verschoond/gaan naar toilet.",
-      icon: "☀️"
+      Icon: Sun
     },
     {
       time: "15:00",
       activity: "Tussendoortje",
       description: "Tussendoortje met drinken.",
-      icon: "🥨"
+      Icon: Cookie
     },
     {
       time: "16:30 - 17:00",
       activity: "Boterham",
       description: "Boterham met melk (of iets anders).",
-      icon: "🥪"
+      Icon: Sandwich
     },
     {
       time: "17:00 - 18:30",
       activity: "Ophalen",
       description: "Alle kindjes worden opgehaald en nog even een momentje om de dag te bespreken.",
-      icon: "🏠"
+      Icon: Home
     }
   ];
 
@@ -100,7 +106,7 @@ const DailySchedule = () => {
               {/* Time & Icon */}
               <div className="flex-shrink-0 text-center">
                 <div className="text-white rounded-full w-24 h-24 flex items-center justify-center mb-2" style={{ backgroundColor: '#40735B' }}>
-                  <span className="text-3xl">{item.icon}</span>
+                  <item.Icon className="w-10 h-10" strokeWidth={1.5} />
                 </div>
                 <p className="font-bold text-lg" style={{ color: '#40735B' }}>{item.time}</p>
               </div>
@@ -129,7 +135,9 @@ const DailySchedule = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-start">
-              <div className="text-3xl mr-4 mt-1">🌧️</div>
+              <div className="mr-4 mt-1">
+                <CloudRain className="w-10 h-10 text-gray-700" strokeWidth={1.5} />
+              </div>
               <div>
                 <h4 className="font-semibold text-gray-800 mb-2">Weer</h4>
                 <p className="text-gray-700">
@@ -139,7 +147,9 @@ const DailySchedule = () => {
               </div>
             </div>
             <div className="flex items-start">
-              <div className="text-3xl mr-4 mt-1">👶</div>
+              <div className="mr-4 mt-1">
+                <Baby className="w-10 h-10 text-gray-700" strokeWidth={1.5} />
+              </div>
               <div>
                 <h4 className="font-semibold text-gray-800 mb-2">Individuele Behoeften</h4>
                 <p className="text-gray-700">

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Target, Sprout, Palette, BookOpen } from 'lucide-react';
 
 const About = () => {
   return (
@@ -83,7 +84,9 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="text-2xl mr-4 mt-1">🎯</div>
+                <div className="mr-4 mt-1">
+                  <Target className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Mijn doel</h4>
                   <p className="text-gray-700">
@@ -94,7 +97,9 @@ const About = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="text-2xl mr-4 mt-1">🌱</div>
+                <div className="mr-4 mt-1">
+                  <Sprout className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Ontwikkeling</h4>
                   <p className="text-gray-700">
@@ -107,7 +112,9 @@ const About = () => {
 
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="text-2xl mr-4 mt-1">🎨</div>
+                <div className="mr-4 mt-1">
+                  <Palette className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Activiteiten</h4>
                   <p className="text-gray-700">
@@ -119,7 +126,9 @@ const About = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="text-2xl mr-4 mt-1">📚</div>
+                <div className="mr-4 mt-1">
+                  <BookOpen className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Taal & Muziek</h4>
                   <p className="text-gray-700">

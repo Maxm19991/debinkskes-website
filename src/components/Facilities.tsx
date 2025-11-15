@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Home, Bed, Sun, Droplets, Umbrella } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 
 const Facilities = () => {
@@ -29,7 +30,7 @@ const Facilities = () => {
             className="bg-white p-8 rounded-lg shadow-lg"
           >
             <h3 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
-              <span className="text-4xl mr-4">🏠</span>
+              <Home className="w-10 h-10 text-gray-700 mr-4" strokeWidth={1.5} />
               Binnen
             </h3>
             <div className="space-y-4 text-gray-700">
@@ -46,7 +47,7 @@ const Facilities = () => {
 
             <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.25)' }}>
               <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                <span className="text-2xl mr-2">🛏️</span>
+                <Bed className="w-6 h-6 text-gray-700 mr-2" strokeWidth={1.5} />
                 Slaapruimte
               </h4>
               <p className="text-gray-700 text-sm">
@@ -107,7 +108,7 @@ const Facilities = () => {
             className="bg-white p-8 rounded-lg shadow-lg lg:order-2"
           >
             <h3 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
-              <span className="text-4xl mr-4">🌞</span>
+              <Sun className="w-10 h-10 text-gray-700 mr-4" strokeWidth={1.5} />
               Buiten
             </h3>
             <div className="space-y-4 text-gray-700">
@@ -126,7 +127,7 @@ const Facilities = () => {
             <div className="mt-6 space-y-4">
               <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.25)' }}>
                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="text-2xl mr-2">💧</span>
+                  <Droplets className="w-6 h-6 text-gray-700 mr-2" strokeWidth={1.5} />
                   Zomeractiviteiten
                 </h4>
                 <p className="text-gray-700 text-sm">
@@ -137,7 +138,7 @@ const Facilities = () => {
 
               <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.25)' }}>
                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                  <span className="text-2xl mr-2">☂️</span>
+                  <Umbrella className="w-6 h-6 text-gray-700 mr-2" strokeWidth={1.5} />
                   Bescherming
                 </h4>
                 <p className="text-gray-700 text-sm">

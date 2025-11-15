@@ -2,21 +2,28 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { CalendarDays, Euro, Phone, Apple, Utensils, Milk, Cookie, Sandwich, Sparkles, FileText, Baby, Check, ClipboardList, type LucideIcon } from 'lucide-react';
 
 const Pricing = () => {
-  const includedServices = [
-    { service: "Vers fruit", icon: "🍎" },
-    { service: "Warme maaltijd (11:30)", icon: "🍽️" },
-    { service: "Drinken (water, melk, sap)", icon: "🥛" },
-    { service: "Tussendoortjes", icon: "🥨" },
-    { service: "Boterham (16:30)", icon: "🥪" },
-    { service: "Zalf", icon: "🧴" },
-    { service: "Billendoekjes", icon: "🧻" }
+  const includedServices: Array<{
+    service: string;
+    Icon: LucideIcon;
+  }> = [
+    { service: "Vers fruit", Icon: Apple },
+    { service: "Warme maaltijd (11:30)", Icon: Utensils },
+    { service: "Drinken (water, melk, sap)", Icon: Milk },
+    { service: "Tussendoortjes", Icon: Cookie },
+    { service: "Boterham (16:30)", Icon: Sandwich },
+    { service: "Zalf", Icon: Sparkles },
+    { service: "Billendoekjes", Icon: FileText }
   ];
 
-  const parentProvides = [
-    { item: "Flesvoeding", icon: "🍼" },
-    { item: "Speciale voeding", icon: "🥄" }
+  const parentProvides: Array<{
+    item: string;
+    Icon: LucideIcon;
+  }> = [
+    { item: "Flesvoeding", Icon: Baby },
+    { item: "Speciale voeding", Icon: Utensils }
   ];
 
   return (
@@ -46,7 +53,9 @@ const Pricing = () => {
             className="bg-white p-8 rounded-lg shadow-lg"
           >
             <div className="text-center mb-6">
-              <div className="text-5xl mb-4">📅</div>
+              <div className="flex justify-center mb-4">
+                <CalendarDays className="w-12 h-12 text-gray-700" strokeWidth={1.5} />
+              </div>
               <h3 className="text-2xl font-semibold text-gray-800">Openingstijden</h3>
             </div>
             <div className="space-y-3 text-center">
@@ -74,7 +83,9 @@ const Pricing = () => {
             style={{ backgroundColor: '#40735B' }}
           >
             <div className="text-center mb-6">
-              <div className="text-5xl mb-4">💰</div>
+              <div className="flex justify-center mb-4">
+                <Euro className="w-12 h-12 text-white" strokeWidth={1.5} />
+              </div>
               <h3 className="text-2xl font-semibold">Tarieven 2025</h3>
             </div>
             <div className="text-center space-y-4">
@@ -86,9 +97,12 @@ const Pricing = () => {
                 <p className="text-xl font-semibold">€49,50</p>
                 <p className="text-sm">per maand gastouderbureau</p>
               </div>
-              <div className="p-3 rounded text-sm" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                <p className="font-semibold">✅ Kinderopvangtoeslag mogelijk</p>
-                <p>LRK geregistreerd</p>
+              <div className="p-3 rounded text-sm flex items-center justify-center gap-2" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
+                <Check className="w-5 h-5" strokeWidth={2} />
+                <div>
+                  <p className="font-semibold">Kinderopvangtoeslag mogelijk</p>
+                  <p>LRK geregistreerd</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -101,7 +115,9 @@ const Pricing = () => {
             className="bg-white p-8 rounded-lg shadow-lg"
           >
             <div className="text-center mb-6">
-              <div className="text-5xl mb-4">📞</div>
+              <div className="flex justify-center mb-4">
+                <Phone className="w-12 h-12 text-gray-700" strokeWidth={1.5} />
+              </div>
               <h3 className="text-2xl font-semibold text-gray-800">Contact</h3>
             </div>
             <div className="space-y-4">
@@ -129,13 +145,14 @@ const Pricing = () => {
             transition={{ duration: 0.8 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              ✅ Gastouder verzorgt
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center flex items-center justify-center gap-2">
+              <Check className="w-7 h-7 text-gray-700" strokeWidth={2} />
+              Gastouder verzorgt
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {includedServices.map((item, index) => (
                 <div key={index} className="flex items-center p-3 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.2)' }}>
-                  <span className="text-2xl mr-3">{item.icon}</span>
+                  <item.Icon className="w-6 h-6 text-gray-700 mr-3" strokeWidth={1.5} />
                   <span className="text-gray-700">{item.service}</span>
                 </div>
               ))}
@@ -148,13 +165,14 @@ const Pricing = () => {
             transition={{ duration: 0.8 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              📝 Ouder/verzorger geeft mee
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center flex items-center justify-center gap-2">
+              <ClipboardList className="w-7 h-7 text-gray-700" strokeWidth={1.5} />
+              Ouder/verzorger geeft mee
             </h3>
             <div className="space-y-4">
               {parentProvides.map((item, index) => (
                 <div key={index} className="flex items-center p-4 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.2)' }}>
-                  <span className="text-3xl mr-4">{item.icon}</span>
+                  <item.Icon className="w-8 h-8 text-gray-700 mr-4" strokeWidth={1.5} />
                   <span className="text-gray-700 text-lg">{item.item}</span>
                 </div>
               ))}

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Baby, CalendarDays, Home } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -94,17 +95,23 @@ const Hero = () => {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-md">
-            <div className="text-4xl mb-4">👶</div>
+            <div className="mb-4 flex justify-center">
+              <Baby className="w-12 h-12 text-gray-700" strokeWidth={1.5} />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">0-4 jaar</h3>
             <p className="text-gray-600">Opvang voor kinderen van 0 tot 4 jaar</p>
           </div>
           <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-md">
-            <div className="text-4xl mb-4">📅</div>
+            <div className="mb-4 flex justify-center">
+              <CalendarDays className="w-12 h-12 text-gray-700" strokeWidth={1.5} />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">3 dagen per week</h3>
             <p className="text-gray-600">Dinsdag, woensdag en donderdag</p>
           </div>
           <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-md">
-            <div className="text-4xl mb-4">🏠</div>
+            <div className="mb-4 flex justify-center">
+              <Home className="w-12 h-12 text-gray-700" strokeWidth={1.5} />
+            </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">Berg aan de Maas</h3>
             <p className="text-gray-600">Mooie locatie met grote tuin</p>
           </div>
