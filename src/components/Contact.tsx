@@ -39,9 +39,19 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
       setIsSubmitted(true);
       // Reset form
       setFormData({
@@ -54,7 +64,12 @@ const Contact = () => {
         days: [],
         message: ''
       });
-    }, 2000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Er is iets misgegaan bij het verzenden van uw bericht. Probeer het later opnieuw of neem contact op via telefoon.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const days = [
