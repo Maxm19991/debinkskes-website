@@ -29,16 +29,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Snelle links</h3>
             <div className="space-y-2">
-              <Link href="#over-ons" className="block hover:text-amber-300 transition-colors">
+              <Link href="#over-ons" className="block hover:opacity-70 transition-opacity">
                 Over Vivian
               </Link>
-              <Link href="#opvang" className="block hover:text-amber-300 transition-colors">
+              <Link href="#opvang" className="block hover:opacity-70 transition-opacity">
                 Opvanglocatie
               </Link>
-              <Link href="#dagindeling" className="block hover:text-amber-300 transition-colors">
+              <Link href="#dagindeling" className="block hover:opacity-70 transition-opacity">
                 Dagindeling
               </Link>
-              <Link href="#tarieven" className="block hover:text-amber-300 transition-colors">
+              <Link href="#tarieven" className="block hover:opacity-70 transition-opacity">
                 Tarieven
               </Link>
             </div>
@@ -52,7 +52,8 @@ const Footer = () => {
               <p>Aangesloten bij:</p>
               <Link
                 href="https://villa-nana.nl/"
-                className="text-amber-300 hover:text-amber-200 transition-colors"
+                className="hover:opacity-70 transition-opacity"
+                style={{ color: '#D9C27E' }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +72,8 @@ const Footer = () => {
             </p>
             <Link
               href="#inschrijven"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors mt-4 md:mt-0"
+              className="text-white px-6 py-2 rounded-md text-sm font-medium transition-opacity hover:opacity-80 mt-4 md:mt-0"
+              style={{ backgroundColor: '#40735B' }}
             >
               Inschrijven voor ouders
             </Link>

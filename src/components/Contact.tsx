@@ -64,7 +64,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-amber-50">
+    <section id="contact" className="py-20" style={{ backgroundColor: 'rgba(217, 194, 126, 0.15)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -75,7 +75,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Contact & Inschrijving
           </h2>
-          <div className="w-24 h-1 bg-amber-600 mx-auto rounded mb-6"></div>
+          <div className="w-24 h-1 mx-auto rounded mb-6" style={{ backgroundColor: '#40735B' }}></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Heeft u interesse in onze gastouderopvang? Neem gerust contact op voor meer informatie
             of vul het inschrijvingsformulier in voor een kennismaking.
@@ -94,21 +94,21 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Contactgegevens</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <PhoneIcon className="h-6 w-6 text-amber-600 mr-4" />
+                  <PhoneIcon className="h-6 w-6 mr-4" style={{ color: '#40735B' }} />
                   <div>
                     <p className="font-semibold text-gray-800">Telefoon</p>
                     <p className="text-gray-600">06 31 08 45 24</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <EnvelopeIcon className="h-6 w-6 text-amber-600 mr-4" />
+                  <EnvelopeIcon className="h-6 w-6 mr-4" style={{ color: '#40735B' }} />
                   <div>
                     <p className="font-semibold text-gray-800">Email</p>
                     <p className="text-gray-600">info@debinkskes.nl</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MapPinIcon className="h-6 w-6 text-amber-600 mr-4" />
+                  <MapPinIcon className="h-6 w-6 mr-4" style={{ color: '#40735B' }} />
                   <div>
                     <p className="font-semibold text-gray-800">Locatie</p>
                     <p className="text-gray-600">Berg aan de Maas</p>
@@ -139,7 +139,8 @@ const Contact = () => {
                       href="https://villa-nana.nl/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-amber-600 hover:text-amber-700 underline"
+                      className="underline hover:opacity-70 transition-opacity"
+                      style={{ color: '#40735B' }}
                     >
                       Gastouderbureau Villa Nana
                     </a>
@@ -186,7 +187,8 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+                        style={{ '--tw-ring-color': '#40735B' } as React.CSSProperties}
                       />
                     </div>
                     <div>
@@ -304,11 +306,12 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 px-6 rounded-md font-semibold text-lg transition-colors ${
+                    className={`w-full py-3 px-6 rounded-md font-semibold text-lg text-white transition-opacity ${
                       isSubmitting
-                        ? 'bg-gray-400 cursor-not-allowed'
-                        : 'bg-amber-600 hover:bg-amber-700 text-white'
+                        ? 'cursor-not-allowed opacity-50'
+                        : 'hover:opacity-80'
                     }`}
+                    style={{ backgroundColor: isSubmitting ? '#9ca3af' : '#40735B' }}
                   >
                     {isSubmitting ? 'Versturen...' : 'Verstuur aanmelding'}
                   </button>

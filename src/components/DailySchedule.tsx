@@ -68,7 +68,7 @@ const DailySchedule = () => {
   ];
 
   return (
-    <section id="dagindeling" className="py-20 bg-white">
+    <section id="dagindeling" className="py-20 bg-white/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -79,7 +79,7 @@ const DailySchedule = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Dagindeling
           </h2>
-          <div className="w-24 h-1 bg-amber-600 mx-auto rounded mb-6"></div>
+          <div className="w-24 h-1 mx-auto rounded mb-6" style={{ backgroundColor: '#40735B' }}></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Een dag bij De Binkskes is gevuld met leuke activiteiten, rust en persoonlijke aandacht.
             Hieronder vindt u onze vaste dagindeling.
@@ -99,10 +99,10 @@ const DailySchedule = () => {
             >
               {/* Time & Icon */}
               <div className="flex-shrink-0 text-center">
-                <div className="bg-amber-600 text-white rounded-full w-24 h-24 flex items-center justify-center mb-2">
+                <div className="text-white rounded-full w-24 h-24 flex items-center justify-center mb-2" style={{ backgroundColor: '#40735B' }}>
                   <span className="text-3xl">{item.icon}</span>
                 </div>
-                <p className="font-bold text-amber-600 text-lg">{item.time}</p>
+                <p className="font-bold text-lg" style={{ color: '#40735B' }}>{item.time}</p>
               </div>
 
               {/* Content */}
@@ -121,7 +121,8 @@ const DailySchedule = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-amber-50 p-8 rounded-lg mb-12"
+          className="p-8 rounded-lg mb-12"
+          style={{ backgroundColor: 'rgba(217, 194, 126, 0.2)' }}
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
             Flexibiliteit & Persoonlijke Aandacht
@@ -157,14 +158,15 @@ const DailySchedule = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="bg-amber-600 text-white p-8 rounded-lg inline-block">
+          <div className="text-white p-8 rounded-lg inline-block" style={{ backgroundColor: '#40735B' }}>
             <h4 className="text-2xl font-semibold mb-4">Vragen over onze dagindeling?</h4>
             <p className="mb-6 text-lg">
               Neem gerust contact op voor meer informatie!
             </p>
             <Link
               href="#inschrijven"
-              className="bg-white text-amber-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors inline-block text-lg"
+              className="bg-white px-8 py-3 rounded-md font-semibold transition-opacity hover:opacity-80 inline-block text-lg"
+              style={{ color: '#40735B' }}
             >
               Inschrijven voor ouders
             </Link>

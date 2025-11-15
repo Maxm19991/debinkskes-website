@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="over-ons" className="py-20 bg-white">
+    <section id="over-ons" className="py-20 bg-white/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -16,7 +17,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Voorstellen
           </h2>
-          <div className="w-24 h-1 bg-amber-600 mx-auto rounded"></div>
+          <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#40735B' }}></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -26,7 +27,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-amber-50 p-8 rounded-lg">
+            <div className="p-8 rounded-lg" style={{ backgroundColor: 'rgba(217, 194, 126, 0.2)' }}>
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Over Vivian</h3>
               <div className="space-y-4 text-gray-700">
                 <p>
@@ -51,23 +52,20 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Family Photo Placeholder */}
+          {/* Family Photo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="bg-gradient-to-br from-amber-200 to-orange-200 rounded-lg w-full h-80 flex items-center justify-center shadow-lg">
-              <div className="text-center">
-                <div className="text-6xl mb-4">👨‍👩‍👦‍👦</div>
-                <p className="text-amber-800 font-semibold">Familie Lotz-Salden</p>
-                <div className="mt-4 flex justify-center space-x-4">
-                  <span className="text-2xl">🐕</span>
-                  <span className="text-2xl">🐱</span>
-                </div>
-                <p className="text-sm text-amber-700 mt-2">Binky & Sien</p>
-              </div>
+            <div className="relative rounded-lg w-full h-80 shadow-lg overflow-hidden">
+              <Image
+                src="/Familie Lotz-Salden.jpeg"
+                alt="Familie Lotz-Salden"
+                fill
+                className="object-cover"
+              />
             </div>
           </motion.div>
         </div>
@@ -141,14 +139,15 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="bg-amber-600 text-white p-6 rounded-lg inline-block">
+          <div className="text-white p-6 rounded-lg inline-block" style={{ backgroundColor: '#40735B' }}>
             <h4 className="text-xl font-semibold mb-4">✅ LRK Geregistreerd</h4>
             <p className="mb-4">
               U kunt kinderopvangtoeslag aanvragen, en ik ben aangesloten bij Gastouderbureau Villa Nana.
             </p>
             <Link
               href="#inschrijven"
-              className="bg-white text-amber-600 px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition-colors inline-block"
+              className="bg-white px-6 py-2 rounded-md font-semibold transition-opacity hover:opacity-80 inline-block"
+              style={{ color: '#40735B' }}
             >
               Inschrijven voor ouders
             </Link>
