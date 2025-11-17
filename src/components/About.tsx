@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Target, Sprout, Palette, BookOpen } from 'lucide-react';
+import ImageCarousel from './ImageCarousel';
 
 const About = () => {
   return (
@@ -53,19 +54,29 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Family Photo */}
+          {/* Family Photo Carousel */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="relative rounded-lg w-full h-80 shadow-lg overflow-hidden">
-              <Image
-                src="/Familie Lotz-Salden.jpeg"
+            <div className="relative rounded-lg w-full h-[450px] shadow-lg overflow-hidden">
+              <ImageCarousel
+                images={[
+                  '/Familie Lotz-Salden.jpeg',
+                  '/Nic & Tijs.jpeg',
+                  '/Binky.jpeg',
+                  '/Sien.jpeg'
+                ]}
                 alt="Familie Lotz-Salden"
-                fill
-                className="object-cover"
+                interval={4000}
+                objectPositions={[
+                  'center center',
+                  'center 20%',
+                  'center center',
+                  'center center'
+                ]}
               />
             </div>
           </motion.div>

@@ -58,7 +58,7 @@ const Hero = () => {
           >
             <div className="relative rounded-full w-80 h-80 md:w-96 md:h-96 shadow-2xl overflow-hidden">
               <Image
-                src="/De binkskes.jpeg"
+                src="/Logo De Binkskes.jpeg"
                 alt="De Binkskes Logo"
                 fill
                 className="object-cover"

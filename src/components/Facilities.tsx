@@ -93,7 +93,10 @@ const Facilities = () => {
                   '/Grote tuin 1.jpeg',
                   '/Grote tuin 2.jpeg',
                   '/Grote tuin 3.jpeg',
-                  '/Grote tuin 4.jpeg'
+                  '/Grote tuin 4.jpeg',
+                  '/Grote tuin 5.jpeg',
+                  '/Grote tuin 6.jpeg',
+                  '/Grote tuin 7.jpeg'
                 ]}
                 alt="Grote Tuin"
               />
@@ -149,6 +152,22 @@ const Facilities = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Photo Gallery Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/fotos"
+            className="inline-block text-white px-8 py-4 rounded-lg text-lg font-semibold transition-opacity hover:opacity-80 shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: '#40735B' }}
+          >
+            Onze foto's
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

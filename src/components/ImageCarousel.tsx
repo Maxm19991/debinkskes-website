@@ -8,9 +8,10 @@ interface ImageCarouselProps {
   alt: string;
   className?: string;
   interval?: number;
+  objectPositions?: string[];
 }
 
-const ImageCarousel = ({ images, alt, className = '', interval = 5000 }: ImageCarouselProps) => {
+const ImageCarousel = ({ images, alt, className = '', interval = 5000, objectPositions }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const ImageCarousel = ({ images, alt, className = '', interval = 5000 }: ImageCa
             alt={`${alt} ${index + 1}`}
             fill
             className="object-cover"
+            style={objectPositions?.[index] ? { objectPosition: objectPositions[index] } : undefined}
             priority={index === 0}
           />
         </div>
