@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Target, Sprout, Palette, BookOpen } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';

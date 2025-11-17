@@ -165,7 +165,7 @@ const Facilities = () => {
             className="inline-block text-white px-8 py-4 rounded-lg text-lg font-semibold transition-opacity hover:opacity-80 shadow-lg hover:shadow-xl"
             style={{ backgroundColor: '#40735B' }}
           >
-            Onze foto's
+            Onze foto&apos;s
           </Link>
         </motion.div>
       </div>

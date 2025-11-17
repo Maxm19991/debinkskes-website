@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Hand, Apple, Footprints, Moon, Utensils, Bed, Sun, Cookie, Sandwich, Home, CloudRain, Baby, type LucideIcon } from 'lucide-react';
 

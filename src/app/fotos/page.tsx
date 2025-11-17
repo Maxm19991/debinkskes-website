@@ -70,11 +70,11 @@ export default function FotosPage() {
             Terug naar opvanglocatie
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Onze <span style={{ color: '#40735B' }}>Foto's</span>
+            Onze <span style={{ color: '#40735B' }}>Foto&apos;s</span>
           </h1>
           <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#40735B' }}></div>
           <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-            Bekijk hier foto's van onze gastouderopvang, de speelruimte, tuin en de gezellige momenten bij De Binkskes.
+            Bekijk hier foto&apos;s van onze gastouderopvang, de speelruimte, tuin en de gezellige momenten bij De Binkskes.
           </p>
         </motion.div>
 

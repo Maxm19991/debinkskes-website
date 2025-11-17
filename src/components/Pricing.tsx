@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { CalendarDays, Euro, Phone, Apple, Utensils, Milk, Cookie, Sandwich, Sparkles, FileText, Baby, Check, ClipboardList, type LucideIcon } from 'lucide-react';
 
