@@ -71,7 +71,9 @@ const Facilities = () => {
                   '/Speelruimte 1.jpeg',
                   '/Speelruimte 2.jpeg',
                   '/Speelruimte 3.jpeg',
-                  '/Speelruimte 4.jpeg'
+                  '/Speelruimte 4.jpeg',
+                  '/Speelruimte 5.jpeg',
+                  '/Speelruimte 6.jpeg'
                 ]}
                 alt="Speelruimte"
               />
